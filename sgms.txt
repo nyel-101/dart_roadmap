@@ -1,0 +1,102 @@
+======================================================================
+         STUDENT GRADE MANAGEMENT SYSTEM: THE 5-STEP CHALLENGE
+======================================================================
+
+MISSION 1: ANG DATA NG ESTUDYANTE (Variables & Built-in Types)
+----------------------------------------------------------------------
+GOAL: Matutunang mag-imbak at mag-display ng data ng estudyante.
+
+INSTRUCTION:
+Sa loob ng iyong main() function:
+1. Magdeklara ng variable para sa pangalan ng estudyante (String).
+2. Magdeklara ng isang List ng mga grado (double) na may 3 hanggang 4 
+   na grado (hal. 85.5, 92.0, 88.5).
+3. Gamitin ang print() para ipakita sa terminal ang pangalan at ang
+   listahan ng mga grado.
+
+----------------------------------------------------------------------
+
+MISSION 2: ANG COMPUTATION (Operators & Functions)
+----------------------------------------------------------------------
+GOAL: Gumawa ng reusable logic para sa pag-compute ng grado.
+
+INSTRUCTION:
+Sa labas ng iyong main() function:
+1. Gumawa ng function na pinangalanang 'calculateAverage' na tumatanggap
+   ng List<double> bilang parameter at nagbabalik (return) ng double.
+   - Sa loob nito, gamitin ang loop para pag-plus-plusin ang mga grado,
+     at i-divide sa kabuuang bilang ng mga subjects gamit ang operators. ---- done
+2. Gumawa ng isa pang function na 'getLetterGrade' na tumatanggap ng   ---- done
+   double (ang average) at nagbabalik ng String (ang letter grade).
+   - Gamitin ang if-else if-else statement:
+     * 90 pataas = "A"
+     * 80 hanggang 89.9 = "B"
+     * 75 hanggang 79.9 = "C"
+     * Mababa sa 75 = "F"
+3. Subukan ang mga functions na ito sa loob ng main() gamit ang mga  
+   variables na ginawa mo sa Mission 1, at i-print ang resulta. ---- done
+
+----------------------------------------------------------------------
+
+MISSION 3: USER INTERACTION (Terminal Input & Data Type Parsing)
+----------------------------------------------------------------------
+GOAL: Gawing interactive ang system sa pamamagitan ng pagkuha ng 
+      input mula sa keyboard ng user.
+
+INSTRUCTION:
+1. I-import ang 'dart:io' sa pinakataas ng iyong file.
+2. Baguhin ang iyong main() function. Sa halip na naka-hardcode ang 
+   pangalan at grado, gamitin ang 'stdin.readLineSync()' para tanungin
+   ang user:
+   - "Ipasok ang pangalan ng estudyante: "
+   - "Ipasok ang Grado sa Math: "
+   - "Ipasok ang Grado sa Science: "
+3. Tandaan: Dahil String ang binabalik ng stdin, kailangan mong gamitin
+   ang 'double.parse()' para ma-convert ang input na grado bago ito
+   ilagay sa iyong List.
+
+----------------------------------------------------------------------
+
+MISSION 4: ANG INTERACTIVE MENU (Control Flow - Loops & Switch)
+----------------------------------------------------------------------
+GOAL: Panatilihing bukas ang programa at magkaroon ng pagpipilian 
+      (Menu System).
+
+INSTRUCTION:
+1. Sa loob ng main(), gumawa ng isang 'while' loop na patuloy na iikot
+   hangga't hindi pinipili ng user na lumabas.
+2. Sa loob ng loop, i-print ang mga pagpipilian:
+   [1] Magdagdag at I-compute ang Grado ng Estudyante
+   [2] Lumabas sa Programa
+3. Kunan ng input ang user kung 1 o 2 ang pinili niya.
+4. Gumamit ng 'switch' statement o 'if-else' para kontrolin ang daloy:
+   - Kung 1: Patakbuhin ang code mula sa Mission 3.
+   - Kung 2: I-print ang "Salamat sa paggamit!" at baguhin ang kondisyon
+     ng while loop para mag-stop ang programa.
+
+----------------------------------------------------------------------
+
+MISSION 5: ANG PINAKAMALAKING HAMON (Maraming Estudyante - Maps/Lists)
+----------------------------------------------------------------------
+GOAL: Kakayanin na ng system mo na mag-imbak ng higit sa isang estudyante.
+
+INSTRUCTION:
+1. Sa pinakataas ng iyong main() (sa labas ng habang/while loop), magdeklara
+   ng isang malaking listahan: 'List<Map<String, dynamic>> studentList = [];'.
+2. Kapag pinili ng user ang Option 1 (Magdagdag ng Estudyante), pagkatapos
+   mong makuha ang pangalan, average, at letter grade, pagsamahin ito sa
+   isang Map, halimbawa:
+   {
+     'name': name,
+     'average': avg,
+     'grade': letterGrade
+   }
+   Pagkatapos, i-add mo itong Map na ito sa iyong 'studentList' gamit 
+   ang .add() method.
+3. Magdagdag ng bagong option sa iyong Menu:
+   [2] Ipakita ang Lahat ng Estudyante
+   (Ang "Lumabas" ay magiging [3] na ngayon).
+4. Kapag pinili ang Option 2, gumamit ng 'for-in' loop para i-print ang 
+   bawat estudyante na nakatabi sa iyong 'studentList'.
+
+======================================================================
